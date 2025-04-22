@@ -125,6 +125,7 @@ def generate_email():
     if request.method == 'POST':
         target = request.form.get('target')
         api = request.cookies.get('api')
+        #print(api)
         validity = verify_api(api)
         if validity == "Valid Key":
             data = generate_queries(api,target)
