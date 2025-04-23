@@ -5,7 +5,7 @@ import json
 import time
 
 app = Flask(__name__)
-
+CORS(app)
 
 def verify_api(apikey):
     if apikey.isalnum():
